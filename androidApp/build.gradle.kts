@@ -2,7 +2,6 @@ plugins {
     id("com.android.application")
     kotlin("android")
     id("org.jetbrains.compose")
-    id("com.google.gms.google-services")
 }
 
 android {

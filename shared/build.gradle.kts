@@ -1,17 +1,15 @@
-import com.codingfeline.buildkonfig.compiler.FieldSpec.Type.STRING
-
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    kotlin("plugin.serialization")
     id("org.jetbrains.compose")
-    id("com.codingfeline.buildkonfig")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
 kotlin {
     targetHierarchy.default()
-    jvmToolchain(11)
+    jvmToolchain(17)
     android()
     ios()
     iosSimulatorArm64()
@@ -26,35 +24,26 @@ kotlin {
             baseName = "shared"
             isStatic = true
         }
-
-        pod("GoogleSignIn")
-        pod("FirebaseAuth")
     }
     
     sourceSets {
+        val dateTimeVersion = "0.4.1"
+        val napierVersion = "2.6.1"
+
         val commonMain by getting {
             dependencies {
+
+                implementation("org.jetbrains.kotlinx:kotlinx-datetime:$dateTimeVersion")
+
+                implementation("io.github.aakira:napier:$napierVersion")
+                implementation(libs.coroutines.core)
+
                 implementation(compose.runtime)
                 implementation(compose.foundation)
                 implementation(compose.material3)
-                implementation(libs.koin.core)
-            }
-        }
+                implementation(compose.materialIconsExtended)
+                implementation(compose.material)
 
-        val androidMain by getting {
-            dependsOn(commonMain)
-            dependencies {
-                implementation("com.google.firebase:firebase-auth-ktx:22.1.2")
-                implementation("com.google.android.gms:play-services-auth:20.7.0")
-                implementation("androidx.activity:activity-compose:1.7.2")
-
-                implementation(libs.koin.android)
-            }
-        }
-
-        val commonTest by getting {
-            dependencies {
-                implementation(kotlin("test"))
             }
         }
     }
@@ -79,12 +68,5 @@ android {
 
     kotlin {
         jvmToolchain(17)
-    }
-}
-
-buildkonfig {
-    packageName = "app.medial.reproducer"
-    defaultConfigs {
-        buildConfigField(STRING, "GOOGLE_WEB_CLIENT_ID", "110863522126-ts1qk6halhb8f7lcb5gupp4k4jnbr9eh.apps.googleusercontent.com")
     }
 }

@@ -1,15 +1,100 @@
 [versions]
-kotlin = "1.9.10"
+agp = "8.2.0"
+calf-file-picker = "0.2.0"
+kamel-image = "0.7.3"
+kotlin = "1.9.20"
+core-ktx = "1.10.1"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.9.0"
+constraintlayout = "2.1.4"
+lifecycle_version = "2.5.1"
+fragment-ktx = "1.6.1"
+kmm-viewmodel = "1.0.0-ALPHA-14"
 coroutines = "1.7.3"
-compose = "1.5.1"
+compose = "1.5.11"
+paging = "3.3.0-alpha02-0.4.0"
+moko-mvvm = "0.16.1"
+moko-resources = "0.23.0"
+org-jetbrains-kotlin-jvm = "1.9.10"
+moko-permissions-compose = "0.16.0"
+moko-geo-compose = "0.6.0"
+voyager = "1.0.0-rc07"
+androidx-paging = "3.3.0-alpha02"
 koin = "3.5.0"
+glide = "4.15.1"
+stately = "2.0.4"
+firebase-messaging-ktx = "23.2.1"
+lottie-android = "6.1.0"
 
 [libraries]
+calf-file-picker = { module = "com.mohamedrejeb.calf:calf-file-picker", version.ref = "calf-file-picker" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamel-image" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle_version" }
+lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle_version" }
+fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx"}
+
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+okio = { group = "com.squareup.okio", name = "okio", version = "3.5.0" }
+kmm-viewmodels = { group = "com.rickclephas.kmm", name = "kmm-viewmodel-core", version.ref = "kmm-viewmodel" }
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+
+androidx-paging = { module = "androidx.paging:paging-common", version.ref = "androidx-paging"}
+paging-common = { module = "app.cash.paging:paging-common", version.ref = "paging" }
+paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "paging" }
+
+#moko
+moko-geo-compose = { module = "dev.icerock.moko:geo-compose", version.ref = "moko-geo-compose" }
+moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko-permissions-compose" }
+moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resources" }
+moko-resources-compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "moko-resources" }
+
+#voyager
+voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
+voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
+voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
+voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
+
+#webview
+kevinnzou-webview = { group = "io.github.kevinnzou", name = "compose-webview-multiplatform", version = "1.4.0" }
+
+#workaround for iOS issue
+stately-isolate = { module = "co.touchlab:stately-isolate", version.ref = "stately" }
+stately-iso-collections = { module = "co.touchlab:stately-iso-collections", version.ref = "stately" }
+
 #firebase
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version = "32.3.1" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
 firebase-common = { group = "com.google.firebase", name = "firebase-common-ktx" }
+firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+firebase-auth-ui = { group = "com.firebaseui", name = "firebase-ui-auth", version = "8.0.2" }
+google-auth = { group = "com.google.android.gms", name = "play-services-auth", version = "20.7.0" }
 
-#koin
-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+gitlive-firebase-auth = { group = "dev.gitlive", name = "firebase-auth", version = "1.10.3" }
+
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+
+glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+glide-annotations = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebase-messaging-ktx" }
+
+lottie-android = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie-android" }
+
+truecaller = { group = "com.truecaller.android.sdk", name = "truecaller-sdk", version = "3.0.0" }
+play-core-ktx = { group = "com.google.android.play", name = "core-ktx", version = "1.8.1" }
+
+[plugins]
+crashlytics = { id = "com.google.firebase.crashlytics", version = "2.9.9" }
