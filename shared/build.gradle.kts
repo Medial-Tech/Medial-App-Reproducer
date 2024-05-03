@@ -15,12 +15,6 @@ kotlin {
             implementation(project(":shared:core"))
             implementation(project(":shared:ui"))
             implementation(project(":shared:domain"))
-            implementation(libs.decompose.core)
-            implementation(libs.moko.permissions)
-        }
-
-        androidMain.dependencies {
-            implementation(androidLibs.activity.compose)
         }
     }
 }

@@ -4,8 +4,7 @@ import shared
 struct ComposeView: UIViewControllerRepresentable {
 
    func makeUIViewController(context: Context) -> UIViewController {
-       let viewController = MainAppKt.MainViewController()
-       KoinConfig(uiController: viewController).doInitKoin()
+       let viewController = MedialApp.shared.viewController()
        return viewController
    }
 
