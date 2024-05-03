@@ -1,7 +1,12 @@
 target 'iosApp' do
-  use_frameworks!
-  platform :ios, '14.1'
-  pod 'shared', :path => '../shared'
+    use_frameworks!
+    platform :ios, '14.1'
+
+
+    pod 'shared', :path => '../shared'
+    pod 'shared-core', :path => '../shared/core'
+    pod 'shared-ui-screens', :path => '../shared/ui/screens'
+    pod 'shared-chat', :path => '../shared/chat'
 end
 
 post_install do |installer|

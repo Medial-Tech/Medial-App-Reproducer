@@ -1,20 +1,14 @@
 package app.medial.reproducer.android
 
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import app.medial.reproducer.di.KoinConfig
-import app.medial.reproducer.presentation.App
-import com.google.firebase.ktx.Firebase
-import com.google.firebase.ktx.initialize
+import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.ui.Modifier
+import com.medial.app.setUpMedialApp
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        KoinConfig(this).initKoin()
-        Firebase.initialize(this)
-        setContent {
-            App()
-        }
+        setUpMedialApp(Modifier.fillMaxSize())
     }
 }

@@ -46,16 +46,22 @@ kotlin {
 
 dependencies {
     implementation(project(":shared"))
+
+    implementation(androidLibs.core.ktx)
+    implementation(androidLibs.fragment.ktx)
+    implementation(androidLibs.appcompat)
+    implementation(androidLibs.material)
+    implementation(androidLibs.constraintlayout)
+    implementation(androidLibs.lifecycle)
+    implementation(androidLibs.lifecycle.compose)
+    implementation(androidLibs.glide)
+
     implementation("androidx.compose.ui:ui:1.4.3")
     implementation("androidx.compose.ui:ui-tooling:1.4.3")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
     implementation("androidx.compose.foundation:foundation:1.4.3")
     implementation("androidx.compose.material:material:1.4.3")
     implementation("androidx.activity:activity-compose:1.7.1")
-
-    implementation(platform(libs.firebase.bom))
-    implementation(libs.firebase.common)
-    implementation(libs.firebase.auth)
 
     api("androidx.activity:activity-compose:1.7.2")
     api("androidx.core:core-ktx:1.10.1")

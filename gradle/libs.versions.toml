@@ -1,100 +1,114 @@
 [versions]
+versionName = "1.3.1"
+versionCode = "32"
+
 agp = "8.2.0"
-calf-file-picker = "0.2.0"
-kamel-image = "0.7.3"
-kotlin = "1.9.20"
-core-ktx = "1.10.1"
-junit = "4.13.2"
-androidx-test-ext-junit = "1.1.5"
-espresso-core = "3.5.1"
-appcompat = "1.6.1"
-material = "1.9.0"
-constraintlayout = "2.1.4"
-lifecycle_version = "2.5.1"
-fragment-ktx = "1.6.1"
-kmm-viewmodel = "1.0.0-ALPHA-14"
-coroutines = "1.7.3"
-compose = "1.5.11"
-paging = "3.3.0-alpha02-0.4.0"
-moko-mvvm = "0.16.1"
+kotlin = "1.9.23"
+ktor = "2.3.7"
+compose = "1.6.2"
+compose-compiler="1.5.11"
 moko-resources = "0.23.0"
-org-jetbrains-kotlin-jvm = "1.9.10"
-moko-permissions-compose = "0.16.0"
 moko-geo-compose = "0.6.0"
-voyager = "1.0.0-rc07"
-androidx-paging = "3.3.0-alpha02"
-koin = "3.5.0"
-glide = "4.15.1"
+multiplatform-settings = "1.1.1"
+koin = "3.5.3"
 stately = "2.0.4"
-firebase-messaging-ktx = "23.2.1"
-lottie-android = "6.1.0"
+sql-delight = "2.0.1"
+buildKonfig = "0.15.1"
+coil="3.0.0-alpha03"
+decompose="3.0.0-beta01"
+ksoup = "0.1.2"
 
 [libraries]
-calf-file-picker = { module = "com.mohamedrejeb.calf:calf-file-picker", version.ref = "calf-file-picker" }
-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
-junit = { group = "junit", name = "junit", version.ref = "junit" }
-androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-kamel-image = { module = "media.kamel:kamel-image", version.ref = "kamel-image" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle_version" }
-lifecycle-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycle_version" }
-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment-ktx"}
 
-glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
-okio = { group = "com.squareup.okio", name = "okio", version = "3.5.0" }
-kmm-viewmodels = { group = "com.rickclephas.kmm", name = "kmm-viewmodel-core", version.ref = "kmm-viewmodel" }
-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+#utils
+coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version = "1.8.0" }
+kotlinx-dateTime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.5.0" }
+napier = { module = "io.github.aakira:napier", version = "2.6.1" }
+touchlabs-crashlytics = { module = "co.touchlab.crashkios:crashlytics", version = "0.8.5" }
+ksoup = { module = "com.fleeksoft.ksoup:ksoup", version.ref="ksoup" }
+ksoup-network = { module = "com.fleeksoft.ksoup:ksoup-network", version.ref = "ksoup" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.6.2"}
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+rebugger = { module = "io.github.theapache64:rebugger", version = "1.0.0-rc02"}
+kotlinx-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version = "0.3.7"}
 
-androidx-paging = { module = "androidx.paging:paging-common", version.ref = "androidx-paging"}
-paging-common = { module = "app.cash.paging:paging-common", version.ref = "paging" }
-paging-compose-common = { module = "app.cash.paging:paging-compose-common", version.ref = "paging" }
+#paging
+androidx-paging = { module = "androidx.paging:paging-common", version = "3.3.0-alpha02"}
+paging-compose-common = { module = "app.cash.paging:paging-compose-common", version = "3.3.0-alpha02-0.4.0" }
+
+#ui
+kevinnzou-webview = { group = "io.github.kevinnzou", name = "compose-webview-multiplatform", version = "1.9.2" }
+compottie = { module = "io.github.alexzhirkevich:compottie", version = "1.0.0"}
+compose-dnd = { module = "com.mohamedrejeb.dnd:compose-dnd", version = "0.1.0"}
+peekaboo-image-picker = { module = "io.github.onseok:peekaboo-image-picker", version = "0.4.3" }
+
+
+#image-loading
+coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil"}
+coil-network = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil"}
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil"}
+coil-svg = { module = "io.coil-kt.coil3:coil-svg", version.ref = "coil"}
 
 #moko
 moko-geo-compose = { module = "dev.icerock.moko:geo-compose", version.ref = "moko-geo-compose" }
-moko-permissions-compose = { module = "dev.icerock.moko:permissions-compose", version.ref = "moko-permissions-compose" }
+moko-permissions = { module = "dev.icerock.moko:permissions-compose", version = "0.17.0" }
 moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resources" }
 moko-resources-compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "moko-resources" }
 
-#voyager
-voyager-navigator = { module = "cafe.adriel.voyager:voyager-navigator", version.ref = "voyager" }
-voyager-tabNavigator = { module = "cafe.adriel.voyager:voyager-tab-navigator", version.ref = "voyager" }
-voyager-transitions = { module = "cafe.adriel.voyager:voyager-transitions", version.ref = "voyager" }
-voyager-koin = { module = "cafe.adriel.voyager:voyager-koin", version.ref = "voyager" }
-
-#webview
-kevinnzou-webview = { group = "io.github.kevinnzou", name = "compose-webview-multiplatform", version = "1.4.0" }
+#decompose
+decompose-core = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose"}
+decompose-compose = { module = "com.arkivanov.decompose:extensions-compose", version.ref = "decompose"}
 
 #workaround for iOS issue
 stately-isolate = { module = "co.touchlab:stately-isolate", version.ref = "stately" }
 stately-iso-collections = { module = "co.touchlab:stately-iso-collections", version.ref = "stately" }
 
-#firebase
-firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version = "32.3.1" }
-firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
-firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
-firebase-common = { group = "com.google.firebase", name = "firebase-common-ktx" }
-firebase-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
-firebase-auth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
-firebase-auth-ui = { group = "com.firebaseui", name = "firebase-ui-auth", version = "8.0.2" }
-google-auth = { group = "com.google.android.gms", name = "play-services-auth", version = "20.7.0" }
-
-gitlive-firebase-auth = { group = "dev.gitlive", name = "firebase-auth", version = "1.10.3" }
-
-koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
-koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin" }
+#DI
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin" }
 
-glide-compiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
-glide-annotations = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
-firebase-messaging-ktx = { group = "com.google.firebase", name = "firebase-messaging-ktx", version.ref = "firebase-messaging-ktx" }
+#ktor
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 
-lottie-android = { group = "com.airbnb.android", name = "lottie-compose", version.ref = "lottie-android" }
+#sqldelight
+sqlDelight-runtime = { module = "app.cash.sqldelight:runtime", version.ref = "sql-delight" }
+sqlDelight-coroutines-ext = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sql-delight" }
+sqlDelight-paging3-ext = { module = "app.cash.sqldelight:androidx-paging3-extensions", version.ref = "sql-delight" }
+sqlDelight-primitive-adapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "sql-delight" }
+sqlDelight-android-driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sql-delight" }
+sqlDelight-native-driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sql-delight" }
 
-truecaller = { group = "com.truecaller.android.sdk", name = "truecaller-sdk", version = "3.0.0" }
-play-core-ktx = { group = "com.google.android.play", name = "core-ktx", version = "1.8.1" }
+#multiplatform settings
+multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", version.ref = "multiplatform-settings" }
+multiplatform-settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-settings" }
+multiplatform-settings-datastore = { module = "com.russhwolf:multiplatform-settings-datastore", version.ref = "multiplatform-settings" }
+
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-gradlePlugin = { module = "org.jetbrains.compose:org.jetbrains.compose.gradle.plugin", version.ref = "compose" }
+
+[bundles]
+
+ktor-common = ["ktor-client-logging", "ktor-client-core", "ktor-client-content-negotiation", "ktor-serialization-kotlinx-json"]
+sqlDelight-common = ["sqlDelight-runtime", "sqlDelight-coroutines-ext", "sqlDelight-paging3-ext", "sqlDelight-primitive-adapters"]
+multiplatform-settings = ["multiplatform-settings", "multiplatform-settings-coroutines"]
+coil = ["coil", "coil-network", "coil-compose", "coil-svg"]
+decompose = ["decompose-core", "decompose-compose"]
 
 [plugins]
+
 crashlytics = { id = "com.google.firebase.crashlytics", version = "2.9.9" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin"}
+kotlin-serialization = {id = "org.jetbrains.kotlin.plugin.serialization", version= "1.9.20"}
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
+sql-delight = { id = "app.cash.sqldelight", version.ref = "sql-delight"}
+

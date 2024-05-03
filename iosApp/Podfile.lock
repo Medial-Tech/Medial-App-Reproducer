@@ -1,16 +1,31 @@
 PODS:
   - shared (1.0)
+  - shared-chat (1.0)
+  - shared-core (1.0)
+  - shared-ui-screens (1.0)
 
 DEPENDENCIES:
   - shared (from `../shared`)
+  - shared-chat (from `../shared/chat`)
+  - shared-core (from `../shared/core`)
+  - shared-ui-screens (from `../shared/ui/screens`)
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
+  shared-chat:
+    :path: "../shared/chat"
+  shared-core:
+    :path: "../shared/core"
+  shared-ui-screens:
+    :path: "../shared/ui/screens"
 
 SPEC CHECKSUMS:
   shared: 127df190ceb5435a70bd50987bdedc2dc0030f7b
+  shared-chat: 2938ec14fed15d6e3e48b9f7423b62b3be6f671e
+  shared-core: 470f4b2afd0c49d74d67b64ad3e9fe13e79c4691
+  shared-ui-screens: b9158e2bc8f3937504fb19d2f425ca462bb18431
 
-PODFILE CHECKSUM: d91b61895512b23e80b2a6d2258cbf2f12e1f3bc
+PODFILE CHECKSUM: 6ced039cc4fd4a44158cf42e771a6bf723ad6f77
 
 COCOAPODS: 1.13.0
