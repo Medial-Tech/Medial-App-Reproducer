@@ -1,31 +1,225 @@
 PODS:
+  - Ably (1.2.30):
+    - AblyDeltaCodec (= 1.3.3)
+    - msgpack (= 0.4.0)
+  - AblyDeltaCodec (1.3.3)
+  - Amplitude (8.17.1):
+    - AnalyticsConnector (~> 1.0.0)
+  - AnalyticsConnector (1.0.3)
+  - AppAuth (1.7.5):
+    - AppAuth/Core (= 1.7.5)
+    - AppAuth/ExternalUserAgent (= 1.7.5)
+  - AppAuth/Core (1.7.5)
+  - AppAuth/ExternalUserAgent (1.7.5):
+    - AppAuth/Core
+  - BranchSDK (3.4.3)
+  - FirebaseAnalytics (10.24.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.24.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.24.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.24.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - FirebaseCore (10.24.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GoogleUtilities/Logger (~> 7.12)
+  - FirebaseCoreExtension (10.24.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.24.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseCrashlytics (10.24.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseInstallations (~> 10.0)
+    - FirebaseRemoteConfigInterop (~> 10.23)
+    - FirebaseSessions (~> 10.5)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.8)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (~> 2.1)
+  - FirebaseInstallations (10.24.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (10.24.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Reachability (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - FirebaseRemoteConfigInterop (10.24.0)
+  - FirebaseSessions (10.24.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseCoreExtension (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.10)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesSwift (~> 2.1)
+  - GoogleAppMeasurement (10.24.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.24.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.24.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.24.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.24.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - GoogleDataTransport (9.4.1):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleSignIn (7.1.0):
+    - AppAuth (< 2.0, >= 1.7.3)
+    - GTMAppAuth (< 5.0, >= 4.1.1)
+    - GTMSessionFetcher/Core (~> 3.3)
+  - GoogleUtilities/AppDelegateSwizzler (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (7.13.0):
+    - GoogleUtilities/Privacy
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/MethodSwizzler (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (7.13.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.13.0)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (7.13.0)
+  - GoogleUtilities/Reachability (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GTMAppAuth (4.1.1):
+    - AppAuth/Core (~> 1.7)
+    - GTMSessionFetcher/Core (< 4.0, >= 3.3)
+  - GTMSessionFetcher/Core (3.4.1)
+  - msgpack (0.4.0)
+  - nanopb (2.30910.0):
+    - nanopb/decode (= 2.30910.0)
+    - nanopb/encode (= 2.30910.0)
+  - nanopb/decode (2.30910.0)
+  - nanopb/encode (2.30910.0)
+  - PromisesObjC (2.4.0)
+  - PromisesSwift (2.4.0):
+    - PromisesObjC (= 2.4.0)
+  - Reachability (3.7.6)
   - shared (1.0)
-  - shared-chat (1.0)
-  - shared-core (1.0)
-  - shared-ui-screens (1.0)
+  - Siren (6.1.2)
 
 DEPENDENCIES:
+  - Ably
+  - Amplitude (= 8.17.1)
+  - BranchSDK
+  - FirebaseAnalytics
+  - FirebaseCrashlytics
+  - FirebaseMessaging
+  - GoogleSignIn
+  - Reachability
   - shared (from `../shared`)
-  - shared-chat (from `../shared/chat`)
-  - shared-core (from `../shared/core`)
-  - shared-ui-screens (from `../shared/ui/screens`)
+  - Siren
+
+SPEC REPOS:
+  trunk:
+    - Ably
+    - AblyDeltaCodec
+    - Amplitude
+    - AnalyticsConnector
+    - AppAuth
+    - BranchSDK
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebaseMessaging
+    - FirebaseRemoteConfigInterop
+    - FirebaseSessions
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleSignIn
+    - GoogleUtilities
+    - GTMAppAuth
+    - GTMSessionFetcher
+    - msgpack
+    - nanopb
+    - PromisesObjC
+    - PromisesSwift
+    - Reachability
+    - Siren
 
 EXTERNAL SOURCES:
   shared:
     :path: "../shared"
-  shared-chat:
-    :path: "../shared/chat"
-  shared-core:
-    :path: "../shared/core"
-  shared-ui-screens:
-    :path: "../shared/ui/screens"
 
 SPEC CHECKSUMS:
+  Ably: 0022e87130c1a433cf63852ef09d0cdd7c19f028
+  AblyDeltaCodec: add5d06a756b3581b12aab5b5500a320b8c55bea
+  Amplitude: a43a03b98ce379b1fd7a08b5733d199ff5d9130f
+  AnalyticsConnector: a53214d38ae22734c6266106c0492b37832633a9
+  AppAuth: 501c04eda8a8d11f179dbe8637b7a91bb7e5d2fa
+  BranchSDK: 078e92df232a7cc0a8d900287d1e57057a2e2997
+  FirebaseAnalytics: b5efc493eb0f40ec560b04a472e3e1a15d39ca13
+  FirebaseCore: 11dc8a16dfb7c5e3c3f45ba0e191a33ac4f50894
+  FirebaseCoreExtension: af5fd85e817ea9d19f9a2659a376cf9cf99f03c0
+  FirebaseCoreInternal: bcb5acffd4ea05e12a783ecf835f2210ce3dc6af
+  FirebaseCrashlytics: af38ea4adfa606f6e63fcc22091b61e7938fcf66
+  FirebaseInstallations: 8f581fca6478a50705d2bd2abd66d306e0f5736e
+  FirebaseMessaging: 4d52717dd820707cc4eadec5eb981b4832ec8d5d
+  FirebaseRemoteConfigInterop: 6c349a466490aeace3ce9c091c86be1730711634
+  FirebaseSessions: 2651b464e241c93fd44112f995d5ab663c970487
+  GoogleAppMeasurement: f3abf08495ef2cba7829f15318c373b8d9226491
+  GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
+  GoogleSignIn: d4281ab6cf21542b1cfaff85c191f230b399d2db
+  GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
+  GTMAppAuth: f69bd07d68cd3b766125f7e072c45d7340dea0de
+  GTMSessionFetcher: 8000756fc1c19d2e5697b90311f7832d2e33f6cd
+  msgpack: c85f6251873059738472ae136951cec5f30f3251
+  nanopb: 438bc412db1928dac798aa6fd75726007be04262
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
+  Reachability: fd0ecd23705e2599e4cceeb943222ae02296cbc6
   shared: 127df190ceb5435a70bd50987bdedc2dc0030f7b
-  shared-chat: 2938ec14fed15d6e3e48b9f7423b62b3be6f671e
-  shared-core: 470f4b2afd0c49d74d67b64ad3e9fe13e79c4691
-  shared-ui-screens: b9158e2bc8f3937504fb19d2f425ca462bb18431
+  Siren: c951ae243b57160629fb2e4d2f630cbfc5d5452b
 
-PODFILE CHECKSUM: 6ced039cc4fd4a44158cf42e771a6bf723ad6f77
+PODFILE CHECKSUM: 1eb8eda6491978a8f9487ce7da833497bdec7666
 
 COCOAPODS: 1.13.0

@@ -4,9 +4,17 @@ target 'iosApp' do
 
 
     pod 'shared', :path => '../shared'
-    pod 'shared-core', :path => '../shared/core'
-    pod 'shared-ui-screens', :path => '../shared/ui/screens'
-    pod 'shared-chat', :path => '../shared/chat'
+
+    pod 'FirebaseMessaging'
+    pod 'FirebaseAnalytics'
+    pod 'FirebaseCrashlytics'
+    pod 'Siren'
+    pod 'BranchSDK'
+    pod 'Ably'
+    pod 'Reachability'
+    pod 'GoogleSignIn'
+    pod 'Amplitude', '8.17.1'
+
 end
 
 post_install do |installer|

@@ -16,6 +16,10 @@ kotlin {
             implementation(project(":shared:ui"))
             implementation(project(":shared:domain"))
         }
+
+        androidMain.dependencies {
+            implementation("androidx.activity:activity-compose:1.7.1")
+        }
     }
 }
 
