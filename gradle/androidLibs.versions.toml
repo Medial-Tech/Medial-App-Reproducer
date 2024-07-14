@@ -29,8 +29,8 @@ datastore = { module = "androidx.datastore:datastore-preferences", version = "1.
 ably = { module = "io.ably:ably-android", version = "1.2.34"}
 
 #ui
-lottie = { group = "com.airbnb.android", name = "lottie-compose", version = "6.1.0" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version = "4.15.1" }
+youtube-player ={ module = "com.pierfrancescosoffritti.androidyoutubeplayer:core", version = "12.1.0"}
 
 
 play-app-update = { group = "com.google.android.play", name = "app-update", version = "2.1.0" }
@@ -58,5 +58,6 @@ amplitude = { module = "com.amplitude:analytics-android", version = "1.11.0" }
 
 [plugins]
 google-services = { id = "com.google.gms.google-services", version = "4.4.0" }
+sentry-gradle-plugin = { id = "io.sentry.android.gradle", version = "4.9.0" }
 
 

@@ -1,22 +1,22 @@
 [versions]
-versionName = "1.3.1"
-versionCode = "32"
+versionName = "1.3.3"
+versionCode = "37"
 
 agp = "8.2.0"
-kotlin = "1.9.23"
+kotlin = "2.0.0"
 ktor = "2.3.7"
-compose = "1.6.2"
-compose-compiler="1.5.11"
-moko-resources = "0.23.0"
-moko-geo-compose = "0.6.0"
+compose = "1.6.10"
 multiplatform-settings = "1.1.1"
 koin = "3.5.3"
 stately = "2.0.4"
 sql-delight = "2.0.1"
 buildKonfig = "0.15.1"
-coil="3.0.0-alpha03"
-decompose="3.0.0-beta01"
+coil="3.0.0-alpha06"
+decompose="3.0.0"
 ksoup = "0.1.2"
+compass = "1.0.0"
+connectivity = "1.1.2"
+kmpalette = "3.1.0"
 
 [libraries]
 
@@ -32,15 +32,30 @@ kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "
 rebugger = { module = "io.github.theapache64:rebugger", version = "1.0.0-rc02"}
 kotlinx-immutable-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version = "0.3.7"}
 
+sentry = { module = "io.sentry:sentry-kotlin-multiplatform", version = "0.7.1" }
+
+connectivity-device = { module = "dev.jordond.connectivity:connectivity-device", version.ref = "connectivity" }
+connectivity-device-compose = { module = "dev.jordond.connectivity:connectivity-compose-device", version.ref = "connectivity" }
+
+compass-geocoder = { module = "dev.jordond.compass:geocoder", version.ref = "compass" }
+compass-geocoder-mobile = { module = "dev.jordond.compass:geocoder-mobile", version.ref = "compass" }
+compass-geolocation = { module = "dev.jordond.compass:geolocation", version.ref = "compass" }
+compass-geolocation-mobile = { module = "dev.jordond.compass:geolocation-mobile", version.ref = "compass" }
+
 #paging
 androidx-paging = { module = "androidx.paging:paging-common", version = "3.3.0-alpha02"}
 paging-compose-common = { module = "app.cash.paging:paging-compose-common", version = "3.3.0-alpha02-0.4.0" }
 
 #ui
-kevinnzou-webview = { group = "io.github.kevinnzou", name = "compose-webview-multiplatform", version = "1.9.2" }
-compottie = { module = "io.github.alexzhirkevich:compottie", version = "1.0.0"}
+kevinnzou-webview = { group = "io.github.kevinnzou", name = "compose-webview-multiplatform", version = "1.9.12" }
+compottie = { module = "io.github.alexzhirkevich:compottie", version = "2.0.0-beta01" }
 compose-dnd = { module = "com.mohamedrejeb.dnd:compose-dnd", version = "0.1.0"}
-peekaboo-image-picker = { module = "io.github.onseok:peekaboo-image-picker", version = "0.4.3" }
+peekaboo-image-picker = { module = "io.github.onseok:peekaboo-image-picker", version = "0.5.2" }
+zoomable = { module = "com.mxalbert.zoomable:zoomable", version = "1.6.1" }
+constraintLayout = { module = "tech.annexflow.compose:constraintlayout-compose-multiplatform", version = "0.4.0" }
+kmpalette-core = { module = "com.kmpalette:kmpalette-core", version.ref = "kmpalette" }
+kmpalette-extensions-network = { module = "com.kmpalette:extensions-network", version.ref = "kmpalette" }
+
 
 
 #image-loading
@@ -48,12 +63,10 @@ coil = { module = "io.coil-kt.coil3:coil", version.ref = "coil"}
 coil-network = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil"}
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil"}
 coil-svg = { module = "io.coil-kt.coil3:coil-svg", version.ref = "coil"}
+coil-gif = { module = "io.coil-kt.coil3:coil-gif", version.ref = "coil" }
 
 #moko
-moko-geo-compose = { module = "dev.icerock.moko:geo-compose", version.ref = "moko-geo-compose" }
 moko-permissions = { module = "dev.icerock.moko:permissions-compose", version = "0.17.0" }
-moko-resources-generator = { module = "dev.icerock.moko:resources-generator", version.ref = "moko-resources" }
-moko-resources-compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "moko-resources" }
 
 #decompose
 decompose-core = { module = "com.arkivanov.decompose:decompose", version.ref = "decompose"}
@@ -88,8 +101,10 @@ multiplatform-settings = { module = "com.russhwolf:multiplatform-settings", vers
 multiplatform-settings-coroutines = { module = "com.russhwolf:multiplatform-settings-coroutines", version.ref = "multiplatform-settings" }
 multiplatform-settings-datastore = { module = "com.russhwolf:multiplatform-settings-datastore", version.ref = "multiplatform-settings" }
 
+# for conventions
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+compose-compiler-gradlePlugin = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradle-plugin", version.ref = "kotlin" }
 compose-gradlePlugin = { module = "org.jetbrains.compose:org.jetbrains.compose.gradle.plugin", version.ref = "compose" }
 
 [bundles]
@@ -99,6 +114,8 @@ sqlDelight-common = ["sqlDelight-runtime", "sqlDelight-coroutines-ext", "sqlDeli
 multiplatform-settings = ["multiplatform-settings", "multiplatform-settings-coroutines"]
 coil = ["coil", "coil-network", "coil-compose", "coil-svg"]
 decompose = ["decompose-core", "decompose-compose"]
+compass = ["compass-geocoder", "compass-geocoder-mobile", "compass-geolocation", "compass-geolocation-mobile"]
+kmPalette = ["kmpalette-core", "kmpalette-extensions-network"]
 
 [plugins]
 
@@ -108,7 +125,13 @@ androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin"}
 kotlin-serialization = {id = "org.jetbrains.kotlin.plugin.serialization", version= "1.9.20"}
+
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
+
 buildKonfig = { id = "com.codingfeline.buildkonfig", version.ref = "buildKonfig" }
 sql-delight = { id = "app.cash.sqldelight", version.ref = "sql-delight"}
+
+kmp = { id = "kotlinMultiplatform", version = "1.0.0"}
+cmp = { id = "composeMultiplatform", version = "1.0.0"}
 

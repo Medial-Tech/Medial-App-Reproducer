@@ -20,18 +20,21 @@ dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.compose.gradlePlugin)
+    compileOnly(libs.compose.compiler.gradlePlugin)
 }
 
 gradlePlugin {
     plugins {
         register("kotlinMultiplatform"){
-            id = "com.medial.app.kotlinMultiplatform"
+            id = "kotlinMultiplatform"
             implementationClass = "KotlinMultiplatformPlugin"
+            version = "1.0.0"
         }
 
         register("composeMultiplatform"){
-            id = "com.medial.app.composeMultiplatform"
+            id = "composeMultiplatform"
             implementationClass = "ComposeMultiplatformPlugin"
+            version = "1.0.0"
         }
     }
 }

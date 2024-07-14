@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization).apply(false)
     alias(libs.plugins.composeMultiplatform).apply(false).apply(false)
     alias(libs.plugins.kotlinCocoapods).apply(false)
+    alias(libs.plugins.composeCompiler).apply(false)
 }
 
 tasks.register("clean", Delete::class) {

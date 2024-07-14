@@ -1,5 +1,5 @@
 plugins {
-    id("com.medial.app.kotlinMultiplatform")
+    id("kotlinMultiplatform")
 }
 
 kotlin {

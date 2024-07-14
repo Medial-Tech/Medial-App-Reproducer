@@ -1,6 +1,5 @@
 plugins {
-    id("com.medial.app.kotlinMultiplatform")
-    alias(libs.plugins.composeMultiplatform)
+    id("kotlinMultiplatform")
 }
 
 kotlin {
@@ -8,7 +7,6 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             implementation(project(":shared:core"))
-            implementation(compose.runtime)
         }
     }
 }

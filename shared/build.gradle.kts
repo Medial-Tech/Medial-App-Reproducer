@@ -1,6 +1,6 @@
 plugins {
-    id("com.medial.app.kotlinMultiplatform")
-    id("com.medial.app.composeMultiplatform")
+    id("kotlinMultiplatform")
+    id("composeMultiplatform")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)

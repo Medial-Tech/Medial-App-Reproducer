@@ -1,17 +1,18 @@
-import com.android.build.api.dsl.LibraryExtension
-import com.medial.app.convention.configureKotlinAndroidCompose
+import com.medial.app.convention.configureComposeCompiler
 import com.medial.app.convention.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
 import org.jetbrains.compose.ComposeExtension
+import org.jetbrains.kotlin.compose.compiler.gradle.ComposeCompilerGradlePluginExtension
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
 class ComposeMultiplatformPlugin : Plugin<Project> {
     override fun apply(target: Project) = with(target) {
         with(pluginManager){
             apply(libs.findPlugin("composeMultiplatform").get().get().pluginId)
+            apply(libs.findPlugin("composeCompiler").get().get().pluginId)
         }
 
         val composeDeps = extensions.getByType<ComposeExtension>().dependencies
@@ -31,6 +32,6 @@ class ComposeMultiplatformPlugin : Plugin<Project> {
             }
         }
 
-        extensions.configure<LibraryExtension>(::configureKotlinAndroidCompose)
+        extensions.configure<ComposeCompilerGradlePluginExtension>(::configureComposeCompiler)
     }
 }
