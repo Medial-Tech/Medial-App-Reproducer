@@ -26,6 +26,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.medial.app.core.SentryHelper
 import com.medial.app.ui.core.theme.MedialTheme
 
 /**
@@ -52,7 +53,7 @@ fun MedialApp(
             ) {
 
                 Button(
-                    onClick = { throw Exception("Testing Crash")}
+                    onClick = { throw Exception("Testing Crash") }
                 ){
                     Text(text = "Crash")
                 }

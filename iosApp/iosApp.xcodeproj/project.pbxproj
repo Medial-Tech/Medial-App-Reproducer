@@ -11,7 +11,7 @@
 		058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 058557D8273AAEEB004C7B11 /* Preview Assets.xcassets */; };
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
-		806DC7A62C43D215000701B4 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 806DC7A52C43D215000701B4 /* Sentry */; };
+		806DC7AE2C43D542000701B4 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 806DC7AD2C43D542000701B4 /* Sentry */; };
 		A176D6728573C60351EFC359 /* Pods_iosApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F1ADE56783F908DC8790D94 /* Pods_iosApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A176D6728573C60351EFC359 /* Pods_iosApp.framework in Frameworks */,
-				806DC7A62C43D215000701B4 /* Sentry in Frameworks */,
+				806DC7AE2C43D542000701B4 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +108,7 @@
 				D8FC388B93CC7B1DD006DA80 /* Frameworks */,
 				37AE2C50FE188CA19EFAAC8F /* [CP] Copy Pods Resources */,
 				1B5793856B636C31B80A6847 /* [CP] Embed Pods Frameworks */,
+				806DC7AB2C43D403000701B4 /* Upload DSYM */,
 			);
 			buildRules = (
 			);
@@ -115,7 +116,7 @@
 			);
 			name = iosApp;
 			packageProductDependencies = (
-				806DC7A52C43D215000701B4 /* Sentry */,
+				806DC7AD2C43D542000701B4 /* Sentry */,
 			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
@@ -146,7 +147,7 @@
 			);
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
-				806DC7A42C43D215000701B4 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				806DC7AC2C43D542000701B4 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -225,6 +226,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		806DC7AB2C43D403000701B4 /* Upload DSYM */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+			);
+			name = "Upload DSYM";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which sentry-cli >/dev/null; then\nexport SENTRY_ORG=medial-0k\nexport SENTRY_PROJECT=kotlin\nexport SENTRY_AUTH_TOKEN=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\nERROR=$(sentry-cli debug-files upload --include-sources \"$DWARF_DSYM_FOLDER_PATH\" --force-foreground 2>&1 >/dev/null)\nif [ ! $? -eq 0 ]; then\necho \"error: sentry-cli - $ERROR\"\nfi\nelse\necho \"error: sentry-cli not installed, download from https://github.com/getsentry/sentry-cli/releases\"\nfi\n\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -423,7 +443,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		806DC7A42C43D215000701B4 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+		806DC7AC2C43D542000701B4 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
 			requirement = {
@@ -434,9 +454,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		806DC7A52C43D215000701B4 /* Sentry */ = {
+		806DC7AD2C43D542000701B4 /* Sentry */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 806DC7A42C43D215000701B4 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			package = 806DC7AC2C43D542000701B4 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
 			productName = Sentry;
 		};
 /* End XCSwiftPackageProductDependency section */
