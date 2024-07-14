@@ -51,13 +51,11 @@ fun MedialApp(
                 contentAlignment = Alignment.Center
             ) {
 
-                OutlinedTextField(
-                    value = "",
-                    onValueChange = {},
-                    readOnly = true,
-                    placeholder = { Text(text = "Click here") },
-                    modifier = Modifier.fillMaxWidth()
-                )
+                Button(
+                    onClick = { throw Exception("Testing Crash")}
+                ){
+                    Text(text = "Crash")
+                }
             }
         }
     }

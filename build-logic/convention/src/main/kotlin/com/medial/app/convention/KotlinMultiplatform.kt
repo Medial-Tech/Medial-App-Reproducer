@@ -18,6 +18,9 @@ internal fun Project.configureKotlinMultiplatform(
     applyDefaultHierarchyTemplate()
 
     sourceSets.apply {
+        all {
+            languageSettings.optIn("kotlinx.cinterop.ExperimentalForeignApi")
+        }
         commonMain {
             dependencies {
                 implementation(libs.findLibrary("koin.core").get())
